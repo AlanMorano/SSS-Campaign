@@ -109,16 +109,15 @@ body{
   .button{
     margin-top: 5vh;
     width: 30vw;
+    margin-bottom: 5vh;
   }
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 823px) {
   .calendar-img{
     margin-left: 20vw;
   }
   .pull-right{
     margin-right: 12vw;
-  }
-  .ribbon-div{
   }
   .button{
     width: 40vw;
@@ -133,7 +132,7 @@ body{
     width: 90%;
   }
   .main-text{
-    font-size: 20px;
+    font-size: 15px;
   }
   .row{
     padding-top: 30px;
