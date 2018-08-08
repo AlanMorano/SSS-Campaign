@@ -30,7 +30,44 @@
       <div class="ribbon-div">
         <h2>Don't forget about the event!</h2>
       </div>
-      <a class="button center-block" href="#"><img src="./assets/TY/Calendar.png"><p>ADD TO CALENDAR</p></a>
+      <a class="button center-block" data-toggle="modal" data-target="#calendarModal"><img src="./assets/TY/Calendar.png"><p>ADD TO CALENDAR</p></a>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="text-left">Select a Calendar</p>
+            <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                <a href="#"><img class="calendar-icon" src="https://image.ibb.co/f7beGK/google_calendar.png"></a>
+                <br>
+                <p>GOOGLE CALENDAR</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                <a href="#"><img class="calendar-icon" src="https://image.ibb.co/ewJ4iz/ms_outlook.png"></a>
+                <br>
+                <p>MICROSOFT OUTLOOK</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                <a href="#"><img class="calendar-icon" src="https://image.ibb.co/jYHVOz/yahoo_mail_icon_32198.jpg"></a>
+                <br>
+                <p>YAHOO CALENDAR</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                <a href="#"><img class="calendar-icon" src="https://image.ibb.co/b8TgVe/ical.png"></a>
+                <br>
+                <p>ICAL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

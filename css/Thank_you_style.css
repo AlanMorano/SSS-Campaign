@@ -93,6 +93,30 @@ body{
   padding-left: 1vw;
   display: inline;
 }
+/* Modal */
+.modal-header{
+  border: none
+}
+.close{
+  display: inline;
+  margin-top: -20px !important;
+}
+.modal-body{
+  text-align: center;
+}
+.modal-body .row{
+  padding-top: 0;
+}
+.calendar-icon{
+  width: 100px;
+  height: 100px;
+}
+.modal.fade .modal-dialog {
+  transform: translate3d(0vh, 100vh, 0);
+}
+.modal.in .modal-dialog {
+  transform: translate3d(0, 70vh, 0);
+}
 
 /* Media Queries */
 /* Tablets */
