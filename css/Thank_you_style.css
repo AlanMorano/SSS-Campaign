@@ -11,30 +11,32 @@ body{
   background: #475372;
 }
 .container{
-  padding-top: 100px;
+  padding-top: 10vh;
   color: #fff;
   font-family: Arial-Rounded;
 }
 #main-image{
-  margin-bottom: 13px;
+  margin-bottom: 1vh;
 }
 .main-text{
   font-size: 26px;
   letter-spacing: 1px;
 }
 .row{
-  padding-top: 55px;
+  padding-top: 5vh;
 }
 .calendar-img{
-  margin-left: 60px;
+  margin-left: 2.2vw;
 }
 .pull-right{
   font-family: 'Roboto', sans-serif;
-  margin-right: 40px;
+  margin-right: 2vw;
 }
 .text-time{
   font-weight: 900;
   font-size: 40px;
+  padding-top: 3px;
+  margin-bottom: -1vh;
 }
 .text-club{
   font-weight: 700;
@@ -52,23 +54,23 @@ body{
 .ribbon-div h2{
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  font-size: 36px;
+  font-size: 38px;
   color: #475372 !important;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
 }
 .button {
-  margin-top: 35px;
+  margin-top: 5vh;
   text-align: center;
   vertical-align: middle;
-  width: 310px;
-  padding: 15px 24px;
+  width: 16vw;
+  padding: 1.8vh 1.8vw;
   border: 3px solid #ffffff;
   border-radius: 55px;
   background: #475473;
   -webkit-box-shadow: #adafb3 0px 10px 11px 0px;
   -moz-box-shadow: #adafb3 0px 10px 11px 0px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 11px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 11px 0px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -88,13 +90,13 @@ body{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  padding-left: 10px;
+  padding-left: 1vw;
   display: inline;
 }
 
 /* Media Queries */
-/* Iphone 5/SE*/
-@media only screen and (max-width: 320px) {
+/* Phones*/
+@media only screen and (max-width: 420px) {
   .container{
     padding-top: 50px;
   }
@@ -104,12 +106,15 @@ body{
   .main-text{
     font-size: 20px;
   }
+  .row{
+    padding-top: 30px;
+  }
   .calendar-img{
-    width: 40%;
-    margin-left: 88px;
+    width: 30%;
+    margin-left: 31vw;
   }
   .pull-right{
-    margin-right: 25px;
+    margin-right: 18vw;
     margin-top: 20px;
     float: none;
     text-align: center;
@@ -128,14 +133,36 @@ body{
   }
   .ribbon-div{
     background: url(../assets/TY/Ribbon-sm.png) no-repeat center;
+    margin-top: 20px;
   }
   .ribbon-div h2{
-    font-size: 19px;
+    font-size: 18px;
   }
   .button{
     width: 290px;
     margin-bottom: 50px;
   }
 }
-
-
+@media only screen and (max-width: 380px) {
+  .calendar-img{
+    margin-left: 32vw;
+  }
+  .pull-right{
+    margin-right: 13vw;
+  }
+  .button p{
+    padding-left: 2vw;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .calendar-img{
+    width: 35%;
+    margin-left: 28.5vw;
+  }
+  .pull-right{
+    margin-right: 7vw;
+  }
+  .button p{
+    padding-left: 2vw;
+  }
+}
