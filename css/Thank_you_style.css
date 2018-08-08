@@ -7,10 +7,11 @@ html,head,body,div,p,h1,h2,h3,h4,h5,h6,button,img,video{
   src: url(../assets/fonts/ARLRDBD.TTF);
 }
 body{
-  background-color: #475372;
+  height: 100%;
+  background: #475372;
 }
 .container{
-  margin-top: 120px;
+  padding-top: 100px;
   color: #fff;
   font-family: Arial-Rounded;
 }
@@ -24,11 +25,114 @@ body{
 .row{
   padding-top: 55px;
 }
-.col-lg-3{
+.calendar-img{
+  margin-left: 60px;
+}
+.pull-right{
   font-family: 'Roboto', sans-serif;
+  margin-right: 40px;
 }
 .text-time{
-  font: 900;
+  font-weight: 900;
   font-size: 40px;
 }
+.text-club{
+  font-weight: 700;
+  font-size: 28px;
+}
+.text-loc{
+  font-weight: 500;
+  font-size: 20px;
+}
+.ribbon-div{
+  margin-top: 40px;
+  background: url(../assets/TY/Ribbon.png) no-repeat center;
+  text-align: center;
+}
+.ribbon-div h2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  color: #475372 !important;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.button {
+  margin-top: 35px;
+  text-align: center;
+  vertical-align: middle;
+  width: 310px;
+  padding: 15px 24px;
+  border: 3px solid #ffffff;
+  border-radius: 55px;
+  background: #475473;
+  -webkit-box-shadow: #adafb3 0px 10px 11px 0px;
+  -moz-box-shadow: #adafb3 0px 10px 11px 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 11px 0px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.button:hover,
+.button:focus {
+  background: #55658a;
+  color: #ffffff;
+  text-decoration: none;
+}
+.button:active {
+  background: #2b3245;
+}
+.button img{
+  display: inline
+}
+.button p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding-left: 10px;
+  display: inline;
+}
+
+/* Media Queries */
+/* Iphone 5/SE*/
+@media only screen and (max-width: 320px) {
+  .container{
+    padding-top: 50px;
+  }
+  #main-image{
+    width: 90%;
+  }
+  .main-text{
+    font-size: 20px;
+  }
+  .calendar-img{
+    width: 40%;
+    margin-left: 88px;
+  }
+  .pull-right{
+    margin-right: 25px;
+    margin-top: 20px;
+    float: none;
+    text-align: center;
+  }
+  .pull-right img{
+    width: 60%;
+  }
+  .text-time{
+    font-size: 35px;
+  }
+  .text-club{
+    font-size: 20px;
+  }
+  .text-loc{
+    font-size: 20px;
+  }
+  .ribbon-div h2{
+    font-size: 20px;
+  }
+  .button{
+    width: 290px;
+    margin-bottom: 50px;
+  }
+}
+
 
