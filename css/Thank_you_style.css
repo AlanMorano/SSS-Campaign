@@ -126,8 +126,11 @@ body{
   .text-loc{
     font-size: 20px;
   }
+  .ribbon-div{
+    background: url(../assets/TY/Ribbon-sm.png) no-repeat center;
+  }
   .ribbon-div h2{
-    font-size: 20px;
+    font-size: 19px;
   }
   .button{
     width: 290px;
