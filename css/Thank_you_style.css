@@ -95,6 +95,35 @@ body{
 }
 
 /* Media Queries */
+/* Tablets */
+@media only screen and (max-width: 1024px) {
+  .calendar-img{
+    margin-left: 27vw;
+  }
+  .pull-right{
+    margin-right: 20vw;
+  }
+  .ribbon-div{
+    margin-top: 5vh;
+  }
+  .button{
+    margin-top: 5vh;
+    width: 30vw;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .calendar-img{
+    margin-left: 20vw;
+  }
+  .pull-right{
+    margin-right: 12vw;
+  }
+  .ribbon-div{
+  }
+  .button{
+    width: 40vw;
+  }
+}
 /* Phones*/
 @media only screen and (max-width: 420px) {
   .container{
