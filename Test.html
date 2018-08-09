@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="./assets/JS/AddCalEventZones.js"></script>
+	<script src="./assets/JS/AddCalEvent.js"></script>
+</head>
+<body>
+	
+    <!-- Modal -->
+    <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<p class="text-left">Select a Calendar</p>
+							<button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+									<a href="#"><img class="calendar-icon" src="https://image.ibb.co/f7beGK/google_calendar.png"></a>
+									<br>
+									<p>GOOGLE CALENDAR</p>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+									<a href="#"><img class="calendar-icon" src="https://image.ibb.co/ewJ4iz/ms_outlook.png"></a>
+									<br>
+									<p>MICROSOFT OUTLOOK</p>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+									<a href="#"><img class="calendar-icon" src="https://image.ibb.co/jYHVOz/yahoo_mail_icon_32198.jpg"></a>
+									<br>
+									<p>YAHOO CALENDAR</p>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+									<a href="#"><img class="calendar-icon" src="https://image.ibb.co/b8TgVe/ical.png"></a>
+									<br>
+									<p>ICAL</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+<a class="ace_btn dis">ADD TO CALENDAR</a>
+<script>
+
+$(".ace_btn").addcalevent({
+	'data': {
+		"title":"SSS",
+		"desc":"Test Description for email URLs", 
+		"location": "My House",
+		"url": "http://www.ebay.com",		
+		"time":{
+			"start":"August 09, 2018 14:00:00",
+			"end":"August 09, 2018 15:30:00",
+			"zone":"+08:00"
+		},
+	},
+	'ics': "https://apps.marudot.com/ical/"
+});
+
+// Test "UDPATE" functionality. The date and title of the first item should be updated.
+$(".ace_btn").addcalevent({
+	'data': {
+		"title":"SSS",
+		"desc":"Test Description for email URLs", 
+		"location": "My House",
+		"url": "http://www.ebay.com",		
+		"time":{
+			"start":"August 09, 2018 14:00:00",
+			"end":"August 09, 2018 15:30:00",
+			"zone":"+08:00"
+		},
+	},
+	'ics': "https://apps.marudot.com/ical/"
+});
+
+</script>
+</body>
+</html>

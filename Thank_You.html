@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="./css/Thank_you_style.css">
-    <script src="./assets/JS/AddCalEvent.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./assets/JS/AddCalEventZones.js"></script>
+    <script src="./assets/JS/AddCalEvent.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container ace_btn">
       <img src="https://image.ibb.co/bW2K0e/Thank_you.png" id="main-image" class="center-block">
       <p class="text-center main-text">Your slot for the event is now secured.</p>
       <p class="text-center main-text">You are only two steps away towards staffing success!</p>
@@ -32,50 +33,36 @@
       <div class="ribbon-div">
         <h2>Don't forget about the event!</h2>
       </div>
-      <a class="button center-block" data-toggle="modal" data-target="#calendarModal"><img src="https://image.ibb.co/hsxxmK/Calendar.png"><p>ADD TO CALENDAR</p></a>
-    </div>
-    <a class="ace_btn dis">ADD TO CALENDAR</a>
-    <!-- Modal -->
-    <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <p class="text-left">Select a Calendar</p>
-            <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                <a href="#"><img class="calendar-icon" src="https://image.ibb.co/f7beGK/google_calendar.png"></a>
-                <br>
-                <p>GOOGLE CALENDAR</p>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                <a href="#"><img class="calendar-icon" src="https://image.ibb.co/ewJ4iz/ms_outlook.png"></a>
-                <br>
-                <p>MICROSOFT OUTLOOK</p>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                <a href="#"><img class="calendar-icon" src="https://image.ibb.co/jYHVOz/yahoo_mail_icon_32198.jpg"></a>
-                <br>
-                <p>YAHOO CALENDAR</p>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                <a href="#"><img class="calendar-icon" src="https://image.ibb.co/b8TgVe/ical.png"></a>
-                <br>
-                <p>ICAL</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="ace_btn dis" data-toggle="modal" data-target="#calendarModal">
+        <a class="button center-block"><img src="https://image.ibb.co/hsxxmK/Calendar.png"><p>ADD TO CALENDAR</p></a>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
-
+      $(document).ready(function() {
+        $('.container').removeClass('ace_btn');
+        $('.modal').modal('show');
+        $(".ace_btn").addcalevent({
+        'data': {
+          "title":"SSS",
+          "desc":"Test Description for email URLs", 
+          "location": "My House",
+          "url": "http://www.ebay.com",		
+          "time":{
+            "start":"August 09, 2018 14:00:00",
+            "end":"August 09, 2018 15:30:00",
+            "zone":"+08:00"
+          },
+        },
+        'ics': "https://apps.marudot.com/ical/"
+        });
+      });
+      $('.container').removeClass('ace_btn');
+      $(".ace_btn").hover(function () {
+          $('#calendarModal').modal({
+              show: true,
+              backdrop: false
+          })
+      });
       $(".ace_btn").addcalevent({
         'data': {
           "title":"SSS",
@@ -108,5 +95,6 @@
       });
       
       </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>

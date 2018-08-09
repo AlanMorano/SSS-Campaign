@@ -78,16 +78,16 @@
 	};
 
 	$.addcalevent.defaults = {
-        onclick: false,
+        onclick: true,
         apps: [],
         ics: '',
         preVal: true,
         disabledClass: "dis",
         linkText: [
-            'Google Calendar',
-            'Outlook Calendar',
-            'Yahoo Calendar',
-            'iCal Calendar'
+            '<img class="calendar-icon" src="https://image.ibb.co/f7beGK/google_calendar.png"><br>Google Calendar',
+            '<img class="calendar-icon" src="https://image.ibb.co/ewJ4iz/ms_outlook.png"><br>Outlook Calendar',
+            '<img class="calendar-icon" src="https://image.ibb.co/jYHVOz/yahoo_mail_icon_32198.jpg"><br>Yahoo Calendar',
+            '<img class="calendar-icon" src="https://image.ibb.co/b8TgVe/ical.png"><br>iCal Calendar'
         ]
     };
 
@@ -192,10 +192,10 @@
             optionLinks = '';
             for(var i=0,j=this.options.linkText.length;i<j;i++) {
                 if(this._isLinkNeeded(i)) {
-                    optionLinks += '<a class="ace_opt" data-ace-id="'+ i +'" href="javascript:;">' + this.options.linkText[i] + '</a>';
+                    optionLinks += '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6"><a class="ace_opt" data-ace-id="'+ i +'" href="javascript:;">' + this.options.linkText[i] + '</a></div>';
                 }
             }
-            return '<div class="ace_dd" style="' + styleString + '">' + optionLinks + '</div>';
+            return '<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarLabel" aria-hidden="false"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><p style="color: black;">Select a Calendar (Double Click Outside of this to Close the Modal)</p></div><div class="modal-body"><div class="ace_dd row" >' + optionLinks + '</div></div></div></div></div>';
         },
 
         // test to see if we need to display this link
