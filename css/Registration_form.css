@@ -1,5 +1,8 @@
-iframe{
-  height: 70.8vh;
+#bx_form_iframe_12{
+  height: 70.8vh !important;
+}
+.crm-webform-body{
+  height: 98vh !important;
 }
 body{
   font-family: 'Roboto', sans-serif;
@@ -7,7 +10,7 @@ body{
 }
 .crm-webform-input {
   width: 100%;
-  height: 2vh;
+  height: 5.5vh;
   margin-bottom: 1vh;
   background: #ffffff;
   position: relative;
@@ -32,4 +35,12 @@ button.crm-webform-submit-button{
 button.crm-webform-submit-button:hover{
   text-decoration: none;
   color: #ffffff;
+}
+
+/* Media Queries */
+/* Tablets */
+@media only screen and (max-width: 1024px){
+  #bx_form_iframe_12{
+    height: 82vh !important;
+  }
 }
