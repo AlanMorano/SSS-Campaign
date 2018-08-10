@@ -5,14 +5,11 @@ body{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
-input[type="text"],
-input[type="email"]  {
+.crm-webform-input {
   width: 100%;
   height: 2vh;
   margin-bottom: 1vh;
   background: #ffffff;
-}
-.crm-webform-input {
   position: relative;
   max-width: 498px;
   background: #ffffff;
