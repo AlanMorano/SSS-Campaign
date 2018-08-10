@@ -1,0 +1,96 @@
+html,head,body,div,p,h1,h2,h3,h4,h5,h6,button,img,video{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-size:14px;
+  font-family: 'Roboto', 'Sans-Serif'
+}
+.column-inner{
+  padding-top:100px;
+  padding-left: 100px;
+}
+.row{
+  margin: 0;
+}
+.thx-text{
+  font-size: 70px;
+  font-weight: bolder;
+  padding-bottom: 40px;
+  padding-left: 100px;
+  color: #272334;
+}
+.LP-img{
+  width: 55%;
+  padding-left: 100px;
+}
+.left-footer{
+  padding-top:50px;
+}
+.check-img{
+  margin-top: -65px;
+  margin-right: 5px;
+}
+.content-1{
+  display: inline-block;
+  font-size: 35px;
+  color: #5A595F;
+}
+.right-column{
+  padding:100px;
+  height: 100vh;
+  background-color: #38334A;
+  color: #ffff;
+  font-size:16px;
+}
+.right-logo{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.right-logo .img-responsive{
+  width: 203px;
+}
+.top-text{
+  font-size: 24px;
+}
+.right-column h2 span{
+  background-color: #15bdfe;
+}
+.blue-bg-txt{
+  font-size: 40px;
+  font-weight: bolder;
+  color: #262334 !important;
+  margin-top: 3px;
+}
+span{
+  color: #262334 !important;
+}
+.share-txt{
+  padding-top: 50px;
+  font-size: 30px;
+  font-weight: bolder;
+  padding-bottom: 20px;
+}
+.blue-text{
+  color: #C7C2D9;
+}
+ul {
+  list-style-image: url('../assets/blue-check.png');
+}
+.h2-end{
+  padding-top: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+.p-end{
+  padding-bottom: 10px;
+}
+a{
+  color: #18B2F0;
+  text-decoration: #18B2F0 underline;
+}
+a:hover{
+  color: #18B2F0;
+  text-decoration: #18B2F0 underline;
+}
