@@ -13,7 +13,7 @@
     <script src="https://rawgit.com/AlanMorano/SSS-Campaign/AlanBranch/assets/JS/AddCalEvent.js"></script>
   </head>
   <body>
-    <div class="container ace_btn">
+    <div class="container">
       <img src="https://image.ibb.co/bW2K0e/Thank_you.png" id="main-image" class="center-block">
       <p class="text-center main-text">Your slot for the event is now secured.</p>
       <p class="text-center main-text">You are only two steps away towards staffing success!</p>
@@ -38,30 +38,8 @@
       </div>
     </div>
     <script>
-      $(document).ready(function() {
-        $('.container').removeClass('ace_btn');
-        $('.modal').modal('show');
-        $(".ace_btn").addcalevent({
-        'data': {
-          "title":"SSS",
-          "desc":"Test Description for email URLs", 
-          "location": "My House",
-          "url": "http://www.ebay.com",		
-          "time":{
-            "start":"August 09, 2018 14:00:00",
-            "end":"August 09, 2018 15:30:00",
-            "zone":"+08:00"
-          },
-        },
-        'ics': "https://apps.marudot.com/ical/"
-        });
-      });
-      $('.container').removeClass('ace_btn');
       $(".ace_btn").click(function () {
-          $('#calendarModal').modal({
-              show: true,
-              backdrop: false
-          })
+        $('#calendarModal').modal('show');
       });
       $(".ace_btn").addcalevent({
         'data': {
@@ -93,7 +71,6 @@
         },
         'ics': "https://apps.marudot.com/ical/"
       });
-      
       </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>

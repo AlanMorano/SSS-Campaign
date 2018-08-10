@@ -54,101 +54,17 @@ body{
   width: 45vw;
   padding-right: 3vw;
 }
-.row-form{
-  margin-top: 3.5vh;
-  margin-left: 1vw;
-  color: #777c93;
-  font-size: 16px;
-}
-.row-form h1{
+h1{
   font-size: 43px;
   color: #1f2639;
 }
-.row-form input[type="text"],
-.row-form input[type="email"]  {
+input[type="text"],
+input[type="email"]  {
   width: 100%;
   height: 5vh;
   margin-bottom: 2vh;
 }
-textarea{
-  width: 100%;
-  height: 12.5vh;
-}
-.forms-left{
-  margin-left: 0;
-  padding-left: 0;
-  margin-top: 4vh;
-}
-.forms-right{
-  margin-top: 4vh;
-}
-.control {
-    font-family: arial;
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 5px;
-    padding-top: 3px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.control input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-.control_indicator {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background: #ffffff;
-    border: 1px solid #777c93;
-}
-.control-radio .control_indicator {
-    border-radius: 0;
-}
-
-.control:hover input ~ .control_indicator,
-.control input:focus ~ .control_indicator {
-    background: #cccccc;
-}
-
-.control input:checked ~ .control_indicator {
-    background: #777c93;
-}
-.control:hover input:not([disabled]):checked ~ .control_indicator,
-.control input:checked:focus ~ .control_indicator {
-    background: #e6647d;
-}
-.control input:disabled ~ .control_indicator {
-    background: #e6e6e6;
-    opacity: 0.6;
-    pointer-events: none;
-}
-.control_indicator:after {
-    box-sizing: unset;
-    content: '';
-    position: absolute;
-    display: none;
-}
-.control input:checked ~ .control_indicator:after {
-    display: block;
-}
-.control-checkbox .control_indicator:after {
-    left: 6px;
-    top: 1px;
-    width: 4px;
-    height: 12px;
-    border: solid #ffffff;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-.control-checkbox input:disabled ~ .control_indicator:after {
-    border-color: #7b7b7b;
-}
-.send{
+button.crm-webform-submit-button{
   margin-top: 3vh;
   margin-bottom: 4.1vh;
   margin-left: 1vw;
@@ -161,7 +77,7 @@ textarea{
   color: #ffffff;
   text-align: center;  
 }
-.send:hover{
+button.crm-webform-submit-button:hover{
   text-decoration: none;
   color: #ffffff;
 }
