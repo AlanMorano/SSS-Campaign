@@ -1,3 +1,6 @@
+iframe{
+  height: 70.8vh;
+}
 body{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -7,19 +10,27 @@ input[type="email"]  {
   width: 100%;
   height: 2vh;
   margin-bottom: 1vh;
+  background: #ffffff;
+}
+.crm-webform-input {
+  position: relative;
+  max-width: 498px;
+  background: #ffffff;
+  resize: none;
+  border-color: #5ba0da;
 }
 button.crm-webform-submit-button{
-  margin-top: 3vh;
-  margin-bottom: 4.1vh;
-  margin-left: 1vw;
+  margin-top: 0vh;
+  margin-bottom: 0;
+  margin-left: 0vw;
   padding-top: 2.5vh;
-  padding-bottom: 5.5vh;
+  padding-bottom: 6vh;
   width: 100%;
-  height: 5vh;
-  background: #41d8ca;
+  height: 0vh;
+  background: #41d8ca !important;
   font-size: 24px;
   color: #ffffff;
-  text-align: center;  
+  text-align: center;
 }
 button.crm-webform-submit-button:hover{
   text-decoration: none;
