@@ -11,11 +11,36 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <style>
     #bx_form_iframe_12{
-    height: 70.8vh !important;
+      height: 120vh !important;
     }
-    @media only screen and (max-width: 1024px){
+    @media only screen and (max-height: 1366px){
       #bx_form_iframe_12{
-        height: 82vh !important;
+      height: 80vh !important;
+      }
+    }
+    @media only screen and (max-height: 1024px){
+      #bx_form_iframe_12{
+      height: 90vh !important;
+      }
+    }
+    @media only screen and (max-height: 840px){
+      #bx_form_iframe_12{
+        height: 235vh !important;
+      }
+    }
+    @media only screen and (max-height: 812px){
+      #bx_form_iframe_12{
+        height: 250vh !important;
+      }
+    }
+    @media only screen and (max-height: 570px){
+      #bx_form_iframe_12{
+        height: 300vh !important;
+      }
+    }
+    @media only screen and (max-height: 420px){
+      #bx_form_iframe_12{
+        height: 130vh !important;
       }
     }
     </style>
@@ -42,6 +67,10 @@
               var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
             })(window,document,'https://mvpnetph.bitrix24.com/bitrix/js/crm/form_loader.js','b24form');
             b24form({"id":"12","lang":"en","sec":"lwf777","type":"inline"});
+
+            $('#bxform').submit(function(){
+              alert($( "#product_2953370 option:selected" ).text());
+            });
           </script>  
         </div>
       </div>

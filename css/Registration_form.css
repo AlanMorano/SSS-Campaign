@@ -39,11 +39,3 @@ button.crm-webform-submit-button:hover{
 .crm-webform-mini-cart-container{
   display: none;
 }
-
-/* Media Queries */
-/* Tablets */
-@media only screen and (max-width: 1024px){
-  #bx_form_iframe_12{
-    height: 82vh !important;
-  }
-}

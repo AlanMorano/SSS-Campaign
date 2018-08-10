@@ -10,7 +10,7 @@ body{
 }
 .container{
   margin-top: 5vh;
-  margin-bottom: 15.1vh;
+  margin-bottom: 5vh;
 }
 .floatfix{
   width: 100%;
@@ -60,9 +60,8 @@ h1{
 /* Tablets */
 @media only screen and (max-width: 1366px){
  .container{
-    margin-left: auto;
-    margin-top: 6vh;
-    margin-bottom: 13vh;
+    margin-top: 2vh;
+    margin-bottom: 7vh;
  }
  .floatfix{
    margin-left: 0;
@@ -83,8 +82,8 @@ h1{
 }
 @media only screen and (max-width: 1024px){
   .container{
-    margin-top: 7.5vh;
-    margin-bottom: 13vh;
+    margin-top: 4vh;
+    margin-bottom: 7vh;
   }
   .sss-logo{
     width: 90%;
@@ -99,7 +98,7 @@ h1{
 @media only screen and (max-width: 1024px) and (max-height: 768px){
   .container{
     margin-top: 3vh;
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
   }
   .checkbox-div-right{
     margin-left: 2.9vw;
@@ -149,7 +148,7 @@ h1{
     margin-bottom: 0vh;
   }
   .sss-logo{
-    width: auto;
+    width: 90%;
   }
   input, textarea{
     height: 10vh !important;
@@ -172,6 +171,11 @@ h1{
   }
 }
 
+@media only screen and (max-width: 600px){
+  .sss-logo{
+    width: 50%;
+  }
+}
 @media only screen and (max-width: 420px){
   .form-div{
     width: 102vw;
