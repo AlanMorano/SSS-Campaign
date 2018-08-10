@@ -2,7 +2,7 @@
   height: 70.8vh !important;
 }
 .crm-webform-body{
-  height: 98vh !important;
+  height: 100vh !important;
 }
 body{
   font-family: 'Roboto', sans-serif;
@@ -35,6 +35,9 @@ button.crm-webform-submit-button{
 button.crm-webform-submit-button:hover{
   text-decoration: none;
   color: #ffffff;
+}
+.crm-webform-mini-cart-container{
+  display: none;
 }
 
 /* Media Queries */
