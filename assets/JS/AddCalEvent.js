@@ -192,7 +192,7 @@
             optionLinks = '';
             for(var i=0,j=this.options.linkText.length;i<j;i++) {
                 if(this._isLinkNeeded(i)) {
-                    optionLinks += '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6"><a class="ace_opt" data-ace-id="'+ i +'" id="cal'+i+'" href="javascript:;">' + this.options.linkText[i] + '</a></div>';
+                    optionLinks += '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6"><a class="ace_opt" data-ace-id="'+ i +'" href="javascript:;">' + this.options.linkText[i] + '</a></div>';
                 }
             }
             return '<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarLabel" aria-hidden="false"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><p class="text-left" style="color: black;">Select a Calendar</p><button type="button" class="close text-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="ace_dd row" >' + optionLinks + '</div></div></div></div></div>';
