@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="SitePoint">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="./css/Thank_you_style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -15,57 +16,30 @@
   <body>
     <div class="container">
       <img src="https://image.ibb.co/bW2K0e/Thank_you.png" id="main-image" class="center-block">
-      <p class="text-center main-text">Your slot for the event is now secured.</p>
-      <p class="text-center main-text">You are only two steps away towards staffing success!</p>
+      <p class="text-center main-text">Thank you for registering. You are only a few steps away towards staffing success!</p>
+      <p class="text-center main-text">Please choose your desired location and slot.</p>
       <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
+        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-10">
           <div class="calendar-div">
-            <p>2018</p>
-            <div class="dropdown">
-              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown link
-              </a>
-              <ul class="dropdown-menu industry" role="menu" aria-labelledby="menu1">
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/accounting-landing-page/">Accounting</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/drafter-landing-page/">Architecture/Drafting</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/blockchain-landing-page/">Blockchain</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/creative-design-landing-page/">Creative Design</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/ece-landing-page/">Electronics and Communications</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/gamedev-landing-page/">Game Development</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/it-landing-page/">IT Support</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/softdev-landing-page/">Software Development</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/webdev-landing-page/">Web Development</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/eva-landing-page/">Others</a>
-              </ul>
-            </div>
-            <div class="dropdown">
-              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown link
-              </a>
-              <ul class="dropdown-menu industry" role="menu" aria-labelledby="menu1">
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/accounting-landing-page/">Accounting</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/drafter-landing-page/">Architecture/Drafting</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/blockchain-landing-page/">Blockchain</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/creative-design-landing-page/">Creative Design</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/ece-landing-page/">Electronics and Communications</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/gamedev-landing-page/">Game Development</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/it-landing-page/">IT Support</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/softdev-landing-page/">Software Development</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/webdev-landing-page/">Web Development</a>
-                  <a class="dropdown-item industry-option" href="https://sss.bitrix24.site/eva-landing-page/">Others</a>
-              </ul>
-            </div>
-            <p>Saturday</p>
+            <select id="date"> 
+              <option value="11" selected>11</option>
+              <option value="12">12</option>
+              <option value="15">15</option>
+            </select>
+            <p id="day">Saturday</p>
           </div>
           <div class="pull-right">
             <img src="https://image.ibb.co/ctLHmK/SSSLogo_TY.png">
-            <p class="text-time">11:00AM</p>
+            <select id="time">
+              <option value="10" class="text-time" selected>10:00 AM</option>
+              <option value="12" class="text-time">12:00 AM</option>
+            </select>
             <p class="text-club">The Brisbane Club</p>
             <p class="text-loc">Brisbane City QLD, Australia</p>
           </div>
         </div>
-        <div class="col-lg-3"></div>
+        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
       </div>
       <div class="ribbon-div">
         <h2>Don't forget about the event!</h2>
@@ -75,18 +49,41 @@
       </div>
     </div>
     <script>
+      $(".text-club").text('Novotel Brisbane');
+      var date = $("#date").val();
+      var time = $("#time").val();
+      var timeEnd = time + 2;
+      var loc = $(".text-club").text();
+      $("#date").change(function(){
+        date = $("#date").val();
+        if(date == 11){
+          $(".text-club").text('Novotel Brisbane');
+          loc = $(".text-loc").text('Brisbane City, Australia');
+        } else if(date == 12){
+          $(".text-club").text('Novotel Melbourne');
+          loc = $(".text-loc").text('Melbourne City, Australia');
+        } else {
+          $(".text-club").text('Novotel Sydney');
+          loc = $(".text-loc").text('Sydney City, Australia');
+        }
+      });
+      $("#time").change(function(){
+        time = $("#time").val();
+        timeEnd = time + 2;
+      });
       $(".ace_btn").click(function () {
         $('#calendarModal').modal('show');
+
       });
       $(".ace_btn").addcalevent({
         'data': {
           "title":"SSS ",
           "desc":"Test Description for email URLs", 
-          "location": "My House",	
+          "location": loc,	
           "time":{
-            "start":"August 09, 2018 10:00:00",
-            "end":"August 09, 2018 15:30:00",
-            "zone":"+08:00"
+            "start":"October "+date+", 2018 "+time+":00:00",
+            "end":"October "+date+", 2018 "+time+":30:00",
+            "zone":"+10:00"
           },
         },
         'ics': "https://apps.marudot.com/ical/"
@@ -97,12 +94,11 @@
         'data': {
           "title":"SSS",
           "desc":"Test Description for email URLs", 
-          "location": "My House",
-          "url": "http://www.ebay.com",		
+          "location": loc,
           "time":{
-            "start":"August 09, 2018 14:00:00",
-            "end":"August 09, 2018 15:30:00",
-            "zone":"+08:00"
+            "start":"October "+date+", 2018 "+time+":00:00",
+            "end":"October "+date+", 2018 "+time+":00:00",
+            "zone":"+10:00"
           },
         },
         'ics': "https://apps.marudot.com/ical/"
