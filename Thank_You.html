@@ -12,7 +12,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://rawgit.com/AlanMorano/SSS-Campaign/AlanBranch/assets/JS/AddCalEventZones.js"></script>
     <script src="https://rawgit.com/AlanMorano/SSS-Campaign/AlanBranch/assets/JS/AddCalEvent.js"></script>
-    <script src="https://rawgit.com/nwcell/ics.js/master/ics.js"></script>
   </head>
   <body>
     <div class="container">
@@ -82,11 +81,6 @@
           $(".ace_btn").delay(2100).click();
           ctr++;
         }
-      });
-      $("#cal3").click(function(){
-        var cal = ics();
-        cal.addEvent("Staffing Success Summit", description, location, begin, end);
-        cal.download(filename);
       });
       $(".ace_btn").addcalevent({
         'data': {
