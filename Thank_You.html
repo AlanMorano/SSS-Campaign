@@ -34,9 +34,9 @@
             <img src="https://image.ibb.co/ctLHmK/SSSLogo_TY.png">
             <select id="time">
               <option value="10" class="text-time" selected>10:00 AM</option>
-              <option value="12" class="text-time">12:00 AM</option>
+              <option value="12" class="text-time">12:00 NN</option>
             </select>
-            <p class="text-club">The Brisbane Club</p>
+            <p class="text-club">Novotel Brisbane</p>
             <p class="text-loc">Brisbane City QLD, Australia</p>
           </div>
         </div>
@@ -50,7 +50,6 @@
       </div>
     </div>
     <script>
-      $(".text-club").text('Novotel Brisbane');
       var d = new Date();
       var n = d.getTimezoneOffset();
       var zoneNum = Math.abs(n) / 60;
@@ -67,27 +66,16 @@
         if(date == 11){
           $(".text-club").text('Novotel Brisbane');
           loc = $(".text-loc").text('Brisbane City, Australia');
-          start = "October "+ date +", 2018 "+ time +":00:00";
-          end = "October "+ date +", 2018 "+ timeEnd +":00:00";
         } else if(date == 12){
           $(".text-club").text('Novotel Melbourne');
           loc = $(".text-loc").text('Melbourne City, Australia');
-          start = "October "+ date +", 2018 "+ time +":00:00";
-          end = "October "+ date +", 2018 "+ timeEnd +":00:00";
         } else {
           $(".text-club").text('Novotel Sydney');
           loc = $(".text-loc").text('Sydney City, Australia');
-          start = "October "+ date +", 2018 "+ time +":00:00";
-          end = "October "+ date +", 2018 "+ timeEnd +":00:00";
         }
       });
-      $("#time").change(function(){
-        time = $("#time").val();
-        timeEnd = parseInt(time) + 2;
-        start = "October "+ date +", 2018 "+ time +":00:00";
-        end = "October "+ date +", 2018 "+ timeEnd +":00:00";
-      });
       $(".ace_btn").click(function () {
+        timeEnd = parseInt($("#time").val()) + 2;
         $('#calendarModal').modal('show');
         if(ctr == 0){
           $(".container").delay(2000).click();
@@ -95,18 +83,22 @@
           ctr++;
         }
       });
+      $("#cal3").click(function(){
+        var cal = ics();
+        cal.addEvent("Staffing Success Summit", description, location, begin, end);
+        cal.download(filename);
+      });
       $(".ace_btn").addcalevent({
         'data': {
           "title":"Staffing Success Summit",
           "desc":"A seminar on alleviating staffing problems to boost workforce efficiency and aid in business growth", 
-          "location": loc,	
+          "location": $(".text-loc").text(),	
           "time":{
-            "start": start,
-            "end": end,
+            "start": "October "+ $("#date").val() +", 2018 "+ $("#time").val() +":00:00",
+            "end": "October "+ $("#date").val() +", 2018 "+ timeEnd +":00:00",
             "zone":zone
           },
         },
-        'ics': "https://apps.marudot.com/ical/"
       });
       
       // Test "UDPATE" functionality. The date and title of the first item should be updated.
@@ -114,14 +106,13 @@
         'data': {
           "title":"Staffing Success Summit",
           "desc":"A seminar on alleviating staffing problems to boost workforce efficiency and aid in business growth", 
-          "location": loc,
+          "location": $(".text-loc").text(),
           "time":{
-            "start": start,
-            "end": end,
+            "start": "October "+ $("#date").val() +", 2018 "+ $("#time").val() +":00:00",
+            "end": "October "+ $("#date").val() +", 2018 "+ timeEnd +":00:00",
             "zone":zone
           },
         },
-        'ics': "https://apps.marudot.com/ical/"
       });
       </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

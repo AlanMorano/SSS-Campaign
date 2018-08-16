@@ -332,6 +332,9 @@
             case 2:     // Yahoo
                 url = this._getUrl_yahoo();
                 break;
+            case 3:     // ICS
+                url = this._getUrl_ics();
+                break;
             }
             if(url) {
                 if(sameWindow) {
