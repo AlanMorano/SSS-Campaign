@@ -1,0 +1,352 @@
+body {
+  background-color: #2F384F;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+@font-face {
+  font-family: Arial-Rounded;
+  src: url(../assets/fonts/ARLRDBD.TTF);
+}
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+
+.first-block {
+  /* The image used */
+  background-image: url("http://dev.mvp.net.ph/sss/LandingPageSlices/home_imageBG.jpg");
+
+  /* Set a specific height */
+  min-height: 550px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.first-block > .container > .row > .col-lg-12 > h3 {
+  margin: 1em 0;
+}
+
+.second-block {
+  margin: 3em 0 7em;
+}
+
+.third-block {
+  /* The image used */
+  background-image: url("http://dev.mvp.net.ph/sss/LandingPageSlices/BG2.jpg");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+}
+
+.fourth-block, .sixth-block {
+  background-color: #ffffff;
+  padding: 2em 0 5em;
+}
+
+.page-header {
+  border-bottom: none;
+}
+
+.page-header > h1,
+.page-header > h1 {
+  color: #495371;
+}
+
+.fifth-block {
+  /* The image used */
+  background-image: url("http://dev.mvp.net.ph/sss/LandingPageSlices/BG3.jpg");
+
+  /* Set a specific height */
+  min-height: 13em;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.seventh-block,
+.eighth-block,
+.tenth-block {
+  padding: 2em 0 5em;
+  position: relative;
+}
+
+.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  color: #828EAD;
+  font-size: 14px;
+  text-align: center !important;
+}
+
+.custom-color {
+  color: rgb(166, 180, 214) !important;
+}
+
+.text-footer > p {
+  color: #657396;
+}
+
+.eighth-block {
+  background-image: url("http://dev.mvp.net.ph/sss/LandingPageSlices/speakers_Bg.jpg");
+
+  /* Set a specific height */
+  min-height: 550px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.speakers.media {
+  background-color: #B1F5EF;
+}
+
+.speakers.media > .media-left {
+  padding-right: 0;
+}
+
+.speakers.media > .media-body {
+  padding: 3em 1em;
+}
+
+.speakers.media > .media-body > .media-heading {
+  line-height: 23px;
+}
+
+.media {
+  margin-top: 3em;
+}
+
+.media > .media-left > h1 {
+  font-size: 8em !important;
+}
+
+.media > .media-body > .media-heading {
+  color: #47546F;
+}
+
+.media > .media-body > .media-heading > small {
+  font-style: italic;
+}
+
+ul.list-group > li {
+  background-color: transparent;
+  border: none;
+  padding: 15px 15px;
+}
+
+ul.list-group > li.active,
+ul.list-group > li.active:hover {
+  color: #2F384F;
+  background-color: #00F4E0;
+}
+
+ul.list-group > li > h3 {
+  margin: 0;
+}
+
+/*helpers*/
+.m-0 {
+  margin: 0;
+}
+
+.m-1em-0 {
+  margin: 1em 0;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-t-20 {
+  margin-top: 20px !important;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
+}
+
+.m-b-3em {
+  margin-bottom: 3em;
+}
+
+.m-r-10 {
+  margin-right: 10px;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+h1 {
+  color: #27D7C8;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h1 > small {
+  color: #A8B5D7;
+  text-transform: initial;
+  line-height: 30px;
+  font-style: italic;
+}
+
+p {
+  color: white;
+  font-size: 16px;
+}
+
+.text-primary {
+  color: #00FFE9;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.btn-primary {
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  color: #2F384F;
+  background-color: #00FFE9;
+  border-color: #00FFE9;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #00FFE9;
+  border-color: #00FFE9;
+}
+
+.btn-lg {
+  padding: 18px 23px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.check-list {
+  list-style: none;
+}
+
+.check-list > li > h3 {
+  color: #495371;
+  background-image: url('http://dev.mvp.net.ph/sss/LandingPageSlices/tick_Img.png');
+  background-repeat: no-repeat;
+  background-size: 2.2em;
+  line-height: 53px;
+  padding-left: 80px;
+}
+
+.big-number {
+  padding-right: 10px;
+  float: left;
+  font-size: 8em !important;
+}
+
+.l-height-24 {
+  line-height: 24px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.list-group-item.active > h3 {
+  font-weight: bold;
+}
+
+.list-group-item > h3 {
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+
+  section.first-block:before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      content: "";
+      width: 0;
+      height: 0;
+      border-bottom: 200px solid #2f384f;
+      border-left: 50vw solid transparent;
+  }
+
+  section.first-block:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      width: 0;
+      height: 0;
+      border-bottom: 110px solid #2f384f;
+      border-right: 50vw solid transparent;
+  }
+
+  section.third-block:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 120px solid #2f384f;
+      border-right: 100vw solid transparent;
+  }
+
+  section.third-block > .container > .row {
+      margin: 10em 0 5em;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .check-list > li > h3 {
+      line-height: 35px;
+  }
+}

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/Registration_page.css">
     <style>
     #bx_form_iframe_12{
       height: 120vh !important;
@@ -67,10 +68,12 @@
               var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
             })(window,document,'https://mvpnetph.bitrix24.com/bitrix/js/crm/form_loader.js','b24form');
             b24form({"id":"12","lang":"en","sec":"lwf777","type":"inline"});
-
-            $('#bxform').submit(function(){
-              alert($( "#product_2953370 option:selected" ).text());
-            });
+            
+            window.setTimeout( function(){
+              alert($("#bx_form_iframe_12").length);
+              var frameBody = $("#bx_form_iframe_12").contents().find("body");
+            }, 1000);
+            
             $('.go-back').click(function(){
                 history.go(-1);
             });
