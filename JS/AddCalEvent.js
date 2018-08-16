@@ -87,7 +87,7 @@
             '<img class="calendar-icon" src="https://image.ibb.co/f7beGK/google_calendar.png"><br>Google Calendar',
             '<img class="calendar-icon" src="https://image.ibb.co/ewJ4iz/ms_outlook.png"><br>Outlook Calendar',
             '<img class="calendar-icon" src="https://image.ibb.co/jYHVOz/yahoo_mail_icon_32198.jpg"><br>Yahoo Calendar',
-            '<img class="calendar-icon" src="https://image.ibb.co/b8TgVe/ical.png"><br>iCal Calendar'
+            '<img class="calendar-icon" src="https://image.ibb.co/f7beGK/google_calendar.png"><br>Google Calendar'
         ]
     };
 
@@ -192,7 +192,7 @@
             optionLinks = '';
             for(var i=0,j=this.options.linkText.length;i<j;i++) {
                 if(this._isLinkNeeded(i)) {
-                    optionLinks += '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6"><a class="ace_opt" data-ace-id="'+ i +'" href="javascript:;">' + this.options.linkText[i] + '</a></div>';
+                    optionLinks += '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"><a class="ace_opt" data-ace-id="'+ i +'" href="javascript:;">' + this.options.linkText[i] + '</a></div>';
                 }
             }
             return '<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarLabel" aria-hidden="false"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><p class="text-left" style="color: black;">Select a Calendar</p><button type="button" class="close text-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="ace_dd row" >' + optionLinks + '</div></div></div></div></div>';
@@ -332,8 +332,8 @@
             case 2:     // Yahoo
                 url = this._getUrl_yahoo();
                 break;
-            case 3:     // ICS
-                url = this._getUrl_ics();
+            case 3:     // Google
+                url = this._getUrl_google();
                 break;
             }
             if(url) {
