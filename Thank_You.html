@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="./css/Thank_you_style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://rawgit.com/AlanMorano/SSS-Campaign/AlanBranch/assets/JS/AddCalEventZones.js"></script>
     <script src="https://rawgit.com/AlanMorano/SSS-Campaign/AlanBranch/assets/JS/AddCalEvent.js"></script>
+    <script src="https://rawgit.com/nwcell/ics.js/master/ics.js"></script>
   </head>
   <body>
     <div class="container">
@@ -50,40 +51,59 @@
     </div>
     <script>
       $(".text-club").text('Novotel Brisbane');
+      var d = new Date();
+      var n = d.getTimezoneOffset();
+      var zoneNum = Math.abs(n) / 60;
+      var zone = "+0"+zoneNum+":00";
       var date = $("#date").val();
       var time = $("#time").val();
-      var timeEnd = time + 2;
+      var timeEnd = parseInt(time) + 2;
       var loc = $(".text-club").text();
+      var ctr = 0;
+      var start = "October "+ date +", 2018 "+ time +":00:00";
+      var end = "October "+ date +", 2018 "+ timeEnd +":00:00";
       $("#date").change(function(){
         date = $("#date").val();
         if(date == 11){
           $(".text-club").text('Novotel Brisbane');
           loc = $(".text-loc").text('Brisbane City, Australia');
+          start = "October "+ date +", 2018 "+ time +":00:00";
+          end = "October "+ date +", 2018 "+ timeEnd +":00:00";
         } else if(date == 12){
           $(".text-club").text('Novotel Melbourne');
           loc = $(".text-loc").text('Melbourne City, Australia');
+          start = "October "+ date +", 2018 "+ time +":00:00";
+          end = "October "+ date +", 2018 "+ timeEnd +":00:00";
         } else {
           $(".text-club").text('Novotel Sydney');
           loc = $(".text-loc").text('Sydney City, Australia');
+          start = "October "+ date +", 2018 "+ time +":00:00";
+          end = "October "+ date +", 2018 "+ timeEnd +":00:00";
         }
       });
       $("#time").change(function(){
         time = $("#time").val();
-        timeEnd = time + 2;
+        timeEnd = parseInt(time) + 2;
+        start = "October "+ date +", 2018 "+ time +":00:00";
+        end = "October "+ date +", 2018 "+ timeEnd +":00:00";
       });
       $(".ace_btn").click(function () {
         $('#calendarModal').modal('show');
-
+        if(ctr == 0){
+          $(".container").delay(2000).click();
+          $(".ace_btn").delay(2100).click();
+          ctr++;
+        }
       });
       $(".ace_btn").addcalevent({
         'data': {
-          "title":"SSS ",
-          "desc":"Test Description for email URLs", 
+          "title":"Staffing Success Summit",
+          "desc":"A seminar on alleviating staffing problems to boost workforce efficiency and aid in business growth", 
           "location": loc,	
           "time":{
-            "start":"October "+date+", 2018 "+time+":00:00",
-            "end":"October "+date+", 2018 "+time+":30:00",
-            "zone":"+10:00"
+            "start": start,
+            "end": end,
+            "zone":zone
           },
         },
         'ics': "https://apps.marudot.com/ical/"
@@ -92,13 +112,13 @@
       // Test "UDPATE" functionality. The date and title of the first item should be updated.
       $(".ace_btn").addcalevent({
         'data': {
-          "title":"SSS",
-          "desc":"Test Description for email URLs", 
+          "title":"Staffing Success Summit",
+          "desc":"A seminar on alleviating staffing problems to boost workforce efficiency and aid in business growth", 
           "location": loc,
           "time":{
-            "start":"October "+date+", 2018 "+time+":00:00",
-            "end":"October "+date+", 2018 "+time+":00:00",
-            "zone":"+10:00"
+            "start": start,
+            "end": end,
+            "zone":zone
           },
         },
         'ics': "https://apps.marudot.com/ical/"

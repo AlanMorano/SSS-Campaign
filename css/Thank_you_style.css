@@ -144,7 +144,7 @@ body{
   height: 100px;
 }
 .modal.fade .modal-dialog {
-  transform: translate3d(0vh, 100vh, 0);
+  transform: translate3d(0, 70vh, 0);
 }
 .modal.in .modal-dialog {
   transform: translate3d(0, 70vh, 0);
