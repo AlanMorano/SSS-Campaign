@@ -85,9 +85,9 @@
         disabledClass: "dis",
         linkText: [
             '<img class="calendar-icon" src="https://image.ibb.co/f7beGK/google_calendar.png"><br>Google Calendar',
+            '<img class="calendar-icon" src="https://image.ibb.co/f7beGK/google_calendar.png"><br>Google Calendar',
             '<img class="calendar-icon" src="https://image.ibb.co/ewJ4iz/ms_outlook.png"><br>Outlook Calendar',
-            '<img class="calendar-icon" src="https://image.ibb.co/jYHVOz/yahoo_mail_icon_32198.jpg"><br>Yahoo Calendar',
-            '<img class="calendar-icon" src="https://image.ibb.co/f7beGK/google_calendar.png"><br>Google Calendar'
+            '<img class="calendar-icon" src="https://image.ibb.co/jYHVOz/yahoo_mail_icon_32198.jpg"><br>Yahoo Calendar'
         ]
     };
 
@@ -326,14 +326,14 @@
             case 0:     // Google
                 url = this._getUrl_google();
                 break;
-            case 1:     //Outlook
+            case 1:     // Google
+                url = this._getUrl_google();
+                break;
+            case 2:     //Outlook
                 url = this._getUrl_outlook();
                 break;
-            case 2:     // Yahoo
+            case 3:     // Yahoo
                 url = this._getUrl_yahoo();
-                break;
-            case 3:     // Google
-                url = this._getUrl_google();
                 break;
             }
             if(url) {
