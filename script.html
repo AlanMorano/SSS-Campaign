@@ -1,0 +1,55 @@
+<script>
+    var d = new Date();
+    var n = d.getTimezoneOffset();
+    var zoneNum = Math.abs(n) / 60;
+    var ctr = 0;
+    var zone;
+    var zoneEnd;
+    var loc;
+    var start;
+    var end;
+    $("#date").change(function(){
+      date = $("#date").val();
+      if(date == 11){
+        $(".text-club").text('Novotel Brisbane');
+        $(".text-loc").text('Brisbane City, Australia');
+      } else if(date == 12){
+        $(".text-club").text('Novotel Melbourne');
+        $(".text-loc").text('Melbourne City, Australia');
+      } else {
+        $(".text-club").text('Novotel Sydney'); 
+        $(".text-loc").text('Sydney City, Australia');
+      }
+    });
+    function UVal(){
+      loc = $(".text-club").text();
+      if(n>=0){
+      zone = parseInt($("#time").val()) + zoneNum;
+      }else{
+      zone = parseInt($("#time").val()) - zoneNum;
+      } 
+      zoneEnd = parseInt(parseInt(zone) + 2);
+      if(zone.toString().length<2){
+        zone = "0"+zone;
+        zoneEnd = "0"+zoneEnd;
+      }
+      start =  "201810"+$("#date").val()+"T"+zone+"0000Z";
+      end =  "201810"+$("#date").val()+"T"+zoneEnd+"0000Z";
+    }
+    function GCL(){
+      UVal();
+      var gurl = "http://www.google.com/calendar/event?action=TEMPLATE&text=Staffing Success Summit&details=A seminar on alleviating staffing problems to boost workforce efficiency and aid in business growth&location="+loc+"&dates="+start+"/"+end;
+      window.open(encodeURI(gurl));
+    }
+    function OCL(){
+      UVal();
+      var ourl = "https://outlook.live.com/owa/?path=/calendar/view/Month&rru=addevent&startdt="+start+"&enddt="+end+"&subject=Staffing Success Summit&location="+loc+"&body=A seminar on alleviating staffing problems to boost workforce efficiency and aid in business growth";
+      window.open(encodeURI(ourl));
+    }
+    function YCL(){
+      UVal();
+      var yurl = "http://calendar.yahoo.com?v=60&TITLE=Staffing Success Summit&DESC=A seminar on alleviating staffing problems to boost workforce efficiency and aid in business growth&in_loc="+loc+"&ST="+start+"&DUR=0200";
+      window.open(encodeURI(yurl));
+    }
+    </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

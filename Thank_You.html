@@ -1,114 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="SitePoint">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="./css/Thank_you_style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://rawgit.com/AlanMorano/SSS-Campaign/AlanBranch/assets/JS/AddCalEventZones.js"></script>
-    <script src="https://rawgit.com/AlanMorano/SSS-Campaign/AlanBranch/assets/JS/AddCalEvent.js"></script>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="SitePoint">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,900" rel="stylesheet">
+      <link href="./css/Thank_you_style.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
+      <img src="https://image.ibb.co/g9wuJK/SSSLogo_TY.png" id="logo-image" class="center-block">
       <img src="https://image.ibb.co/bW2K0e/Thank_you.png" id="main-image" class="center-block">
-      <p class="text-center main-text">Thank you for registering. You are only a few steps away towards staffing success!</p>
-      <p class="text-center main-text">Please choose your desired location and slot.</p>
+      <p class="text-center main-text">Thank you for signing up!</p><br>
+      <p class="text-center main-text">You are only a few steps away towards success.</p>
+      <p class="text-center main-text">See you at the Staffing Success Summit!</p><br><br><br>
+      <p class="text-center main-text">Share this free event to help someone improve their staffing management and business.</p>
       <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
-        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-10">
-          <div class="calendar-div">
-            <select id="date"> 
-              <option value="11" selected>11</option>
-              <option value="12">12</option>
-              <option value="15">15</option>
-            </select>
-            <p id="day">Saturday</p>
-          </div>
-          <div class="pull-right">
-            <img src="https://image.ibb.co/ctLHmK/SSSLogo_TY.png">
-            <select id="time">
-              <option value="10" class="text-time" selected>10:00 AM</option>
-              <option value="12" class="text-time">12:00 NN</option>
-            </select>
-            <p class="text-club">Novotel Brisbane</p>
-            <p class="text-loc">Brisbane City QLD, Australia</p>
-          </div>
+        <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12">
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
-      </div>
-      <div class="ribbon-div">
-        <h2>Don't forget about the event!</h2>
-      </div>
-      <div class="ace_btn dis" data-toggle="modal" data-target="#calendarModal">
-        <a class="button center-block"><img src="https://image.ibb.co/hsxxmK/Calendar.png"><p>ADD TO CALENDAR</p></a>
+        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+            <a class="social-link center-block left-most" href="http://www.facebook.com/sharer.php?u=https://sss.bitrix24.site/" target="_blank"><i class="fab fa-3x fa-facebook-f"></i></a>
+            <a class="social-link center-block" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://sss.bitrix24.site/" target="_blank"><i class="fab fa-3x fa-linkedin-in"></i></a>
+            <a class="social-link center-block" href="https://twitter.com/share?url=https://sss.bitrix24.site/&amp;text=Staffing%20Success%20Summit&amp;hashtags=staffingsuccesssummit" target="_blank"><i class="fab fa-3x fa-twitter"></i></a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12">
+        </div>
       </div>
     </div>
-    <script>
-      var d = new Date();
-      var n = d.getTimezoneOffset();
-      var zoneNum = Math.abs(n) / 60;
-      var zone = "+0"+zoneNum+":00";
-      var date = $("#date").val();
-      var time = $("#time").val();
-      var timeEnd = parseInt(time) + 2;
-      var loc = $(".text-club").text();
-      var ctr = 0;
-      var start = "October "+ date +", 2018 "+ time +":00:00";
-      var end = "October "+ date +", 2018 "+ timeEnd +":00:00";
-      $("#date").change(function(){
-        date = $("#date").val();
-        if(date == 11){
-          $(".text-club").text('Novotel Brisbane');
-          loc = $(".text-loc").text('Brisbane City, Australia');
-        } else if(date == 12){
-          $(".text-club").text('Novotel Melbourne');
-          loc = $(".text-loc").text('Melbourne City, Australia');
-        } else {
-          $(".text-club").text('Novotel Sydney');
-          loc = $(".text-loc").text('Sydney City, Australia');
-        }
-      });
-      $(".ace_btn").click(function () {
-        timeEnd = parseInt($("#time").val()) + 2;
-        $('#calendarModal').modal('show');
-        if(ctr == 0){
-          $(".container").delay(2000).click();
-          $(".ace_btn").delay(2100).click();
-          ctr++;
-        }
-      });
-      $(".ace_btn").addcalevent({
-        'data': {
-          "title":"Staffing Success Summit",
-          "desc":"A seminar on alleviating staffing problems to boost workforce efficiency and aid in business growth", 
-          "location": $(".text-loc").text(),	
-          "time":{
-            "start": "October "+ $("#date").val() +", 2018 "+ $("#time").val() +":00:00",
-            "end": "October "+ $("#date").val() +", 2018 "+ timeEnd +":00:00",
-            "zone":zone
-          },
-        },
-      });
-      
-      // Test "UDPATE" functionality. The date and title of the first item should be updated.
-      $(".ace_btn").addcalevent({
-        'data': {
-          "title":"Staffing Success Summit",
-          "desc":"A seminar on alleviating staffing problems to boost workforce efficiency and aid in business growth", 
-          "location": $(".text-loc").text(),
-          "time":{
-            "start": "October "+ $("#date").val() +", 2018 "+ $("#time").val() +":00:00",
-            "end": "October "+ $("#date").val() +", 2018 "+ timeEnd +":00:00",
-            "zone":zone
-          },
-        },
-      });
-      </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>
