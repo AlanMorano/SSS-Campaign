@@ -138,6 +138,10 @@ main {
   background-size: cover;
 }
 
+.eighth-block > .container > .col-lg-offset-3 {
+  padding-bottom: 50px;
+}
+
 .speakers.media {
   background-color: #B1F5EF;
 }
@@ -201,6 +205,9 @@ ul.list-group > li > h3 {
 
 .m-t-20 {
   margin-top: 20px !important;
+}
+.m-t-50{
+  margin-top:50px;
 }
 
 .m-b-30 {

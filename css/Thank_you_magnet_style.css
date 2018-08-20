@@ -23,6 +23,7 @@ body{
 .LP-img{
   width: 55%;
   padding-left: 100px;
+display:block;
 }
 .left-footer{
   padding-top:50px;
@@ -37,8 +38,8 @@ body{
   color: #5A595F;
 }
 .right-column{
-  padding:100px;
-  height: 100vh;
+  padding:100px 100px 20px;
+  min-height: 100vh;
   background-color: #38334A;
   color: #ffff;
   font-size:16px;
@@ -55,6 +56,7 @@ body{
 }
 .top-text{
   font-size: 24px;
+  width: 80%;
 }
 .right-column h2 span{
   background-color: #15bdfe;
@@ -64,6 +66,8 @@ body{
   font-weight: bolder;
   color: #262334 !important;
   margin-top: 7px;
+  width: 80%;
+  line-height: 55px;
 }
 span{
   color: #262334 !important;
@@ -214,6 +218,7 @@ a:hover{
     display: none;
   }
   .column-inner{
+    padding-top: 50px;
     margin-bottom: 50px;
   }
   .thx-text{
@@ -227,11 +232,11 @@ a:hover{
     display: block;
   }
   .check-img{
-    margin-top: -25px;
+    margin-top: -45px;
     width: 10%;
   }
   .content-1{
-    font-size: 15px;
+    font-size: 30px;
   }
   .right-column{
     text-align: center;
@@ -239,6 +244,8 @@ a:hover{
   }
   .top-text{
     font-size: 25px;
+    margin: auto;
+    display: block;
   }
   .right-logo .img-responsive{
     margin: auto;
@@ -246,6 +253,8 @@ a:hover{
   .blue-bg-txt,
   .share-txt{
     font-size: 35px;
+    margin: auto;
+    display: block;
   }
   ul{
     text-align: left;
@@ -258,10 +267,6 @@ a:hover{
     width: 100%;
     margin: auto;
     padding-left: 13%;
-  }
-  
-  .column-inner{
-    padding-top: 50px;
   }
   .check-img{
     margin: auto;
@@ -314,9 +319,6 @@ a:hover{
   }
 }
 @media only screen and (max-width: 320px){
-  .check-img{
-    margin-top: -45px;
-  }
   .content-1{
     font-size: 13px;
   }

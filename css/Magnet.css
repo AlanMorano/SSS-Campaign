@@ -1,0 +1,178 @@
+body {
+  height: 100%;
+}
+
+html {
+  min-height: 100%;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+  background-color: #03a9f4;
+
+  border: 0px solid #ced4da;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+}
+
+.form-control:focus {
+  color: #ffffff;
+  font-size: 14px;
+  border: 0px solid;
+  background-color: #03a9f4;
+  /* border-color: #80bdff; */
+  outline: 0;
+  -webkit-box-shadow: none;
+  /* box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); */
+}
+
+input, select, textarea {
+  color: #ff0000;
+}
+
+@media (min-width: 1200px) {
+  .section1 {
+      /* padding-top:5rem;*/
+      height: 100%;
+
+  }
+
+}
+
+.section2 {
+  background-color: #03a9f4;
+  height: 50%;
+  height: 60vh;
+
+}
+
+.card4 {
+padding-top: 40px;
+}
+
+.content {
+  padding: 5px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+}
+
+.btn-download {
+  width: 100%;
+}
+
+.title-form {
+  color: #fff;
+}
+
+.content h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  color: #a9a6a6;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+  font-style: italic;
+  font-size: 14px;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff;
+  font-style: italic;
+}
+
+.m-t-5em {
+  margin-top: 5em;
+}
+
+.bg {
+  height: 36em;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+
+  z-index: -1;
+}
+
+.bg.blue {
+  background-color: #03a9f4;
+  height: 60vh;
+}
+
+.select {
+  font-size: 14px;
+  color: #fff;
+  font-style: italic;
+
+}
+
+.m--20px {
+  margin: 0 -20px;
+}
+
+.m--15px {
+  margin: 0 -15px;
+}
+
+.m-t-25 {
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+      margin: 0;
+      min-width: 100%;
+  }
+
+  .form-content {
+      background-color: #03a9f4;
+  }
+}
+
+@media (min-width: 1199px) {
+  .col-md-12 {
+      width: 100%;
+  }
+
+  .form-content {
+      margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-12 {
+      min-width: 100%;
+  }
+}
+
+@media (min-height: 900px) {
+  .bg {
+      height: 43em;
+  }
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+}
