@@ -2,7 +2,25 @@ body {
   background-color: #2F384F;
   font-family: 'Roboto', sans-serif;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 main {
   height: 100vh;
   overflow-x: hidden;
@@ -114,11 +132,11 @@ main {
   bottom: 0;
   color: #828EAD;
   font-size: 14px;
-  text-align: center !important;
+  text-align: center ;
 }
 
 .custom-color {
-  color: rgb(166, 180, 214) !important;
+  color: rgb(166, 180, 214) ;
 }
 
 .text-footer > p {
@@ -138,7 +156,7 @@ main {
   background-size: cover;
 }
 
-.eighth-block > .container > .col-lg-offset-3 {
+.eighth-block > .container > .speaker-wrapper {
   padding-bottom: 50px;
 }
 
@@ -156,6 +174,7 @@ main {
 
 .speakers.media > .media-body > .media-heading {
   line-height: 23px;
+  font-size: 23px;
 }
 
 .media {
@@ -163,7 +182,7 @@ main {
 }
 
 .media > .media-left > h1 {
-  font-size: 8em !important;
+  font-size: 8em ;
 }
 
 .media > .media-body > .media-heading {
@@ -204,7 +223,7 @@ ul.list-group > li > h3 {
 }
 
 .m-t-20 {
-  margin-top: 20px !important;
+  margin-top: 20px ;
 }
 .m-t-50{
   margin-top:50px;
@@ -228,6 +247,7 @@ ul.list-group > li > h3 {
 
 .p-10 {
   padding: 10px;
+  font-size: 23px;
 }
 
 h1 {
@@ -293,11 +313,11 @@ p {
 .big-number {
   padding-right: 10px;
   float: left;
-  font-size: 8em !important;
+  font-size: 8em ;
 }
 
 .l-height-24 {
-  line-height: 24px;
+  line-height: 27px;
 }
 
 .text-justify {
@@ -355,5 +375,310 @@ p {
 @media only screen and (max-width: 750px) {
   .check-list > li > h3 {
       line-height: 35px;
+  }
+}
+/* Lead Magnet Overlay */
+.overlay {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100vw;
+  cursor: pointer; /* Add a pointer on hover */
+}
+.overlay .Lead-Magnet{
+  width: 50vw;
+  height: 60vh;
+  display: block;
+  margin: auto;
+  width: 61vw;
+  height: 32%;
+  background: #ffffff;
+}
+.overlay .container{
+  margin-top: 10vh;
+}
+.overlay .card4 {
+padding-top: 40px;
+}
+.overlay .card4 img{
+  width: 80%;
+}
+.overlay .content {
+  padding: 5px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+}
+.overlay .title-form {
+  color: #fff;
+}
+.overlay .content h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+.overlay .description {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  color: #a9a6a6;
+}
+.overlay main {
+  position: relative;
+  min-height: 100vh;
+}
+.overlay .bg {
+  height: 36em;
+  position: absolute;
+  bottom: 15vh;
+  width: 100vw;
+  z-index: -1;
+}
+.overlay .bg.blue {
+  background-color: #03a9f4;
+  height: 68%;
+  width: 61vw;
+}
+.overlay .select {
+  font-size: 14px;
+  color: #fff;
+  font-style: italic;
+}
+.overlay .m-t-5em {
+  margin-top: 5em;
+}
+.overlay .m--20px {
+  margin: 0 -20px;
+}
+.overlay .m--15px {
+  margin: 0 -15px;
+}
+.overlay .m-t-25px {
+  margin-top: 25px;
+}
+@media only screen and (min-width: 320px){
+  .overlay .container{
+    background: #ffffff;
+    overflow: auto;
+    max-height: 80vh;
+  }
+  .overlay .Lead-Magnet,
+  .overlay .container{
+    width: 73vw ;
+  }
+  .overlay .form-content{
+    background-color: #03a9f4;
+  }
+  .overlay .text-content p{
+    font-size: 16px;
+    margin: 0 0 10px;
+    color: #111111;
+  }
+} 
+@media only screen and (min-width: 768px){
+  .overlay .Lead-Magnet,
+  .overlay .container{
+    width: 88vw ;
+  }
+  .overlay .text-content{
+    margin-top: 30px;
+    padding-left: 60px ;
+  }
+  .overlay .card4 img{
+    width: 50% ;
+  }
+} 
+@media only screen and (min-width: 768px) and (min-height: 1024px){
+  .overlay .Lead-Magnet,
+  .overlay .container{
+    width: 60vw ;
+  }
+  .overlay .text-content{
+    margin-top: 30px;
+  }
+  .overlay .text-content p{
+    font-size: 20px;
+  }
+  .overlay .card4 img{
+    width: 50% ;
+  }
+}
+@media only screen and (min-width: 970px){
+  .overlay .Lead-Magnet,
+  .overlay .container{
+    width: 55vw ;
+  }
+}
+@media only screen and (min-width: 1024px){
+  .overlay .Lead-Magnet,
+  .overlay .container{
+    width: 74vw ;
+  }
+  .overlay .card4 img{
+    width: 80% ;
+  }
+  .overlay .form-content{
+    padding-left: 10px ;
+  }
+  .overlay .text-content{
+    padding-left: 10px ;
+  }
+  .overlay .text-content p{
+    font-size: 15px ;
+  }
+}
+@media only screen and (min-width: 1280px){
+  .overlay .Lead-Magnet,
+  .overlay .container {
+    width: 67vw ;
+  }
+  .overlay .container {
+    margin-top: 14vh;
+  }
+  .overlay .card4 img {
+    width: 95% ;
+  }
+  .overlay .bg.blue{
+    height: 63%;
+    bottom: 23vh;
+  }
+}
+@media only screen and (min-width: 1366px){
+  .overlay .container{
+    margin-top: 25vh ;
+    background: transparent;
+  }
+  .overlay .Lead-Magnet,
+  .overlay .container{
+    width: 70.5vw ;
+  }
+  .overlay .card4 img {
+    width: 85% ;
+  }
+  .overlay .Lead-Magnet{
+    height: 15% ;
+  }
+  .overlay .bg.blue{
+    height: 43%;
+    width: 70.5vw ;
+    bottom: 20vh;
+  }
+  .overlay .text-content{
+    padding-left: 0px ;
+  }
+  .overlay .text-content p{
+    font-size: 20px ;
+  }
+}
+@media only screen and (min-width: 1366px) and (max-height: 900px){
+  .overlay .bg.blue{
+    height: 48%;
+    bottom: 18vh;
+  }
+  .overlay .container{
+    margin-top: 19vh ;
+  }
+}
+@media only screen and (min-width: 1366px) and (max-height: 768px){
+  .overlay .Lead-Magnet{
+    height: 14%;
+  }
+  .overlay .container{
+    margin-top: 18vh ;
+  }
+  .overlay .bg.blue{
+    height: 54%;
+    bottom: 15vh;
+  }
+  .overlay .card4 img {
+    width: 78% ;
+  }
+  .overlay .text-content p{
+    font-size: 15px ;
+  }
+}
+@media only screen and (min-width: 1366px) and (max-height: 641px){
+  .overlay .Lead-Magnet, .overlay .container, .overlay .bg.blue {
+    width: 67.5vw ;
+  }
+  .overlay .Lead-Magnet {
+    height: 17% ;
+  }
+  .overlay .container{
+    margin-top: 10vh ;
+  }
+  .overlay .bg.blue {
+    height: 64% ;
+    bottom: 9vh ;
+  }
+}
+@media only screen and (min-width: 1600px){
+  .overlay .container{
+    margin-top: 18vh ;
+  }
+  .overlay .Lead-Magnet,
+  .overlay .container{
+    width: 56.5vw ;
+  }
+  .overlay .card4 img {
+    width: 85% ;
+  }
+  .overlay .Lead-Magnet{
+    height: 17% ;
+  }
+  .overlay .bg.blue{
+    height: 49%;
+    bottom: 20vh ;
+    width: 56.5vw ;
+  }
+}
+@media only screen and (min-width: 1600px) and (min-height: 630px){
+  .overlay .Lead-Magnet{
+    height: 19% ;
+  }
+  .overlay .container {
+    margin-top: 10vh ;
+  }
+  .overlay .card4 img {
+    width: 65% ;
+  }
+  .overlay .bg.blue {
+    height: 70%;
+    bottom: 5vh ;
+  }
+}
+@media only screen and (min-width: 1600px) and (min-height: 800px){
+  .overlay .Lead-Magnet{
+    height: 17% ;
+  }
+  .overlay .card4 img {
+    width: 80% ;
+  }
+  .overlay .bg.blue {
+    height: 53% ;
+    bottom: 20vh ;
+  }
+}
+@media only screen and (min-width: 1920px){
+  .overlay .Lead-Magnet,
+  .overlay .container{
+    width: 50.5vw ;
+  }
+  .overlay .container {
+    margin-top: 18vh ;
+  }
+  .overlay .Lead-Magnet{
+    height: 15% ;
+  }
+  .overlay .card4 img {
+    width: 84% ;
+  }
+  .overlay .bg.blue{
+    bottom: 24vh ;
+    width: 50.5vw ;
   }
 }

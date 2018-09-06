@@ -1,0 +1,11 @@
+body{
+  background: url(https://image.ibb.co/fpdkap/Reg_Bg.jpg) no-repeat center;
+  background-size: cover;
+}
+.content{
+  background: #ededed;
+  padding: 10px 20px;
+}
+h3{
+  padding-top: 20px;
+}

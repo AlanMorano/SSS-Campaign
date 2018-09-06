@@ -1,16 +1,9 @@
-#bx_form_iframe_12{
-  height: 70.8vh !important;
-}
 .crm-webform-body{
-  height: 100vh !important;
-}
-body{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  height: auto !important;
 }
 .crm-webform-input {
   width: 100%;
-  height: 5.5vh;
+  height: 60px;
   margin-bottom: 1vh;
   background: #ffffff;
   position: relative;
@@ -23,8 +16,8 @@ button.crm-webform-submit-button{
   margin-top: 0vh;
   margin-bottom: 0;
   margin-left: 0vw;
-  padding-top: 2.5vh;
-  padding-bottom: 6vh;
+  padding-top: 30px;
+  padding-bottom: 55px;
   width: 100%;
   height: 0vh;
   background: #41d8ca !important;
@@ -38,4 +31,10 @@ button.crm-webform-submit-button:hover{
 }
 .crm-webform-mini-cart-container{
   display: none;
+}
+.crm-webform-label-required-field:after{
+  font: normal 6px 'FontAwesome';
+}
+#RESULT_BUTTON_REDIRECT_BNT{
+ display: none !important;
 }
